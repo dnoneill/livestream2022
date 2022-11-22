@@ -6,13 +6,14 @@ html { overflow-y: scroll; }
 /* article {padding:2%;} */
 </style>
 
+{{include.gallery_path}}
 <div id='masonry' class="grid">
 <div class="grid-sizer"></div>
 <div class="gutter-sizer"></div>
 {% for image in site.static_files %}
-  {{image.path}}
   {% if image.path contains include.gallery_path %}
     {% unless image.path contains '.md' %}
+        {{image.path}}
         <img src="{{ image.path | relative_url }}" alt="" class="grid-item" style="padding: 0;">
     {% endunless %}
   {% endif %}
