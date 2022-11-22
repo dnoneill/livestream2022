@@ -1,4 +1,5 @@
 <div class="posts">
+    {{ paginator.posts | inspect }}
     {% unless paginator.posts %}
     <article><section class="post-content"><p>There are no blog posts</p></section></article>
     {% endunless %}
