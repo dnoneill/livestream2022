@@ -1,5 +1,6 @@
 ---
 layout: default
+gallery: "assets/img/pexels"
 ---
 
 <div class="home">
@@ -25,6 +26,6 @@ layout: default
         <h1> {{ site.header_text | default: "Change <code>header_text</code> in <code>_config.yml</code>"}} </h1>
     </div>
 
-    {% include gallery.html gallery_path=page.gallery_path %}
+    {% include gallery.html gallery_path=page.gallery %}
 
 </div>
