@@ -25,7 +25,8 @@ gallery: "assets/img/pexels"
     <div id="main" class="call-out call-out_img">
         <h1> {{ site.header_text | default: "Change <code>header_text</code> in <code>_config.yml</code>"}} </h1>
     </div>
-
+    
+    {{page.gallery}}
     {% include gallery.html gallery_path=page.gallery %}
 
 </div>
